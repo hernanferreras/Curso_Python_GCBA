@@ -1,3 +1,4 @@
+'''Ejercicio de la Clase 1'''
 nombre = input("Ingrese el nombre del cliente: ")
 apellido = input("Ingrese el apellido del cliente: ")
 edad = input("Ingrese la edad del cliente: ")

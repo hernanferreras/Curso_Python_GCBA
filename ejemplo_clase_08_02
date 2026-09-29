@@ -1,0 +1,39 @@
+#Diccionario inicial con productos y precios
+productos = {
+    "lapiz": 50,
+    "cuaderno": 200,
+    "goma": 30,
+    "marcador": 100
+}
+
+#Mostramos los productos disponibles al inicio
+print("Productos disponibles")
+for nombre, precio in productos.items():
+    print(f"{nombre.capitalize()}: ${precio}")
+
+#Bucle para permitir al usuario eliminar productos
+while True:
+    print("\nIngresa el nombre del producto que queres eliminar (o presiona Enter para terminar): ")
+    eliminar = input("Producto a eliminar ").lower()
+
+    #Si el usuario presiona Enter sin escribir nada, se sale del bucle
+    if eliminar == "":
+        break
+
+    #Verificamos si el producto esta en el diccionario y lo eliminamos
+    if eliminar in productos:
+        productos.pop(eliminar)
+        print(f"El producto '{eliminar}' fue eliminado del inventario.")
+    else:
+        print(f"El producto '{eliminar}' no existe en el inventario.")
+
+    #Mostramos el estado actual del diccionario
+    print("\nProductos restantes:")
+    for nombre, precio in productos.items():
+        print(f"{nombre.capitalize()}: ${precio}")
+
+#Estado final del diccionario
+print("\n--- Estado final del inventario ---")
+for nombre, precio in productos.items():
+    print(f"{nombre.capitalize()}: ${precio}")
+

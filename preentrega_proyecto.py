@@ -56,7 +56,7 @@ nombre = ""
 categoria= ""
 precio = ""
 
-while(opcion != 5):
+while(opcion != "5"):
 
     #**** Imprime Menu ****
    
